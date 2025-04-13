@@ -30,7 +30,7 @@ const Login = () => {
         // Store the username in localStorage
         localStorage.setItem('currentUser', username);
         
-        navigate("/Dashboard");
+        navigate("/workplace");
       }
     } catch (err) {
       setError("An error occurred. Please try again.");
