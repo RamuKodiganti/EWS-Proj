@@ -1,0 +1,117 @@
+.dashboard-container {
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.dashboard-title {
+  margin-bottom: 24px;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+.loading-indicator, .error-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #d32f2f;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+}
+
+.data-table th {
+  background-color: #f5f5f5;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+.data-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+
+.team-member-name {
+  font-weight: bold;
+  min-width: 120px;
+}
+
+.option-cell {
+  min-width: 250px;
+}
+
+.option-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.option-item {
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px dashed #eee;
+}
+
+.option-item:last-child {
+  border-bottom: none;
+}
+
+.result-cell {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 4px;
+  min-width: 100px;
+}
+
+.result-cell.red {
+  background-color: #f44336;
+}
+
+.result-cell.yellow {
+  background-color: #FFC107;
+  color: #333;
+}
+
+.result-cell.green {
+  background-color: #4CAF50;
+}
+
+.result-cell.gray {
+  background-color: #9E9E9E;
+}
+
+@media (max-width: 992px) {
+  .data-table {
+    font-size: 14px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 10px;
+  }
+  
+  .option-cell {
+    min-width: 200px;
+  }
+}

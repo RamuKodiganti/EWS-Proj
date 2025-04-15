@@ -275,6 +275,126 @@ body {
   font-size: 15px;
 }
 
+
+.factor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.factor-header:hover {
+  color: var(--primary-color);
+}
+
+.factor-header.active {
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+
+.factor-header.rated {
+  color: var(--success-color);
+}
+
+.factor-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transition: var(--transition);
+  margin-left: 8px;
+}
+
+.factor-arrow.down {
+  border-top: 5px solid var(--dark-gray);
+}
+
+.factor-arrow.up {
+  border-bottom: 5px solid var(--primary-color);
+}
+
+.selected-reason {
+  font-size: 13px;
+  color: var(--success-color);
+  background-color: rgba(22, 163, 74, 0.1);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: 8px;
+  max-width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reason-dropdown {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--input-radius);
+  margin-top: 8px;
+  box-shadow: var(--shadow-sm);
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reason-option {
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reason-option:last-child {
+  border-bottom: none;
+}
+
+.reason-option:hover {
+  background-color: var(--primary-bg);
+}
+
+.reason-option.selected {
+  background-color: var(--primary-bg);
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+
+/* Make the factor items less prominent when not active */
+.factor-item {
+  margin-bottom: 8px; /* Reduced from 16px */
+  background-color: var(--light-gray);
+  border-radius: var(--input-radius);
+  padding: 10px 14px; /* Reduced from 14px */
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.factor-item:hover {
+  border-color: var(--primary-light);
+}
+
+/* Adjust the factor label to work with the new layout */
+.factor-label {
+  font-weight: 500;
+  margin-bottom: 0; /* Changed from 10px */
+  color: var(--text-color);
+  font-size: 15px;
+  flex-grow: 1;
+}
+
 .rating-select {
   padding: 10px 12px;
   border: 1px solid var(--border-color);
@@ -433,6 +553,9 @@ body {
     max-height: 300px;
   }
 }
+
+
+
 
 /* Animation for member selection */
 @keyframes pulse {
